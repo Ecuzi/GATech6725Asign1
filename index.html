@@ -15,133 +15,240 @@
       margin: 0;
       min-height: 100vh;
       font-family: Arial, Helvetica, sans-serif;
-      background: #ffffff;
-      color: #202124;
+      background: #f7f8fa;
+      color: #16191f;
+    }
+
+    .topbar {
+      height: 64px;
+      background: #232f3e;
+      border-bottom: 4px solid #ff9900;
+    }
+
+    .page {
+      min-height: calc(100vh - 64px);
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 24px;
+      padding: 42px 20px;
+    }
+
+    .simulation-title {
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #1f8f45;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .simulation-subtitle {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.7px;
+      color: #5f6b72;
+      text-align: center;
+      margin-bottom: 30px;
     }
 
     .card {
       width: 100%;
       max-width: 520px;
-      border: 1px solid #dadce0;
+      background: #ffffff;
+      border: 1px solid #d5d9d9;
       border-radius: 14px;
-      padding: 36px;
-      text-align: center;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+      padding: 34px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
     }
 
-    .simulation-banner {
-      font-size: 13px;
+    .brand-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 26px;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      background: #232f3e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ff9900;
+      font-size: 16px;
       font-weight: 800;
-      letter-spacing: 1px;
-      color: #b3261e;
-      margin-bottom: 6px;
     }
 
-    .safety-banner {
-      font-size: 11px;
+    .brand-text {
+      font-size: 18px;
       font-weight: 700;
-      letter-spacing: 0.7px;
-      color: #5f6368;
-      margin-bottom: 24px;
-    }
-
-    .course {
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      color: #5f6368;
-      margin-bottom: 18px;
+      color: #232f3e;
     }
 
     h1 {
-      margin: 0 0 12px;
-      font-size: 28px;
+      margin: 0 0 8px;
+      font-size: 27px;
+      color: #16191f;
     }
 
-    .orange-line {
-      width: 54px;
-      height: 4px;
+    .subtitle {
+      font-size: 14px;
+      line-height: 1.55;
+      color: #5f6b72;
+      margin-bottom: 26px;
+    }
+
+    .info-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: #5f6b72;
+      margin-bottom: 7px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .info-box {
+      width: 100%;
+      border: 1px solid #aab7b8;
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin-bottom: 16px;
+      background: #f7f8fa;
+      color: #232f3e;
+      font-size: 14px;
+    }
+
+    .complete-box {
+      width: 100%;
       background: #ff9900;
-      border-radius: 4px;
-      margin: 0 auto 24px;
+      color: #16191f;
+      padding: 12px;
+      border-radius: 22px;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 4px;
+      margin-bottom: 22px;
+    }
+
+    .divider {
+      height: 1px;
+      background: #e1e4e8;
+      margin: 22px 0;
     }
 
     .message {
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 18px;
+      font-size: 21px;
+      font-weight: 800;
+      color: #232f3e;
+      margin-bottom: 12px;
+      text-align: center;
     }
 
     .description {
       font-size: 14px;
       line-height: 1.6;
-      color: #5f6368;
-      margin-bottom: 24px;
+      color: #5f6b72;
+      text-align: center;
+      margin-bottom: 22px;
     }
 
     .safe-box {
-      background: #f6f8fa;
+      background: #eef8f0;
+      border-left: 4px solid #1f8f45;
       border-radius: 8px;
       padding: 16px;
       font-size: 13px;
       line-height: 1.8;
-      text-align: left;
+      color: #214c2b;
     }
 
     .footer {
       margin-top: 24px;
       font-size: 11px;
       color: #80868b;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .simulation-title {
+        font-size: 23px;
+      }
+
+      .card {
+        padding: 26px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="card">
+  <div class="topbar"></div>
 
-    <div class="simulation-banner">
+  <main class="page">
+
+    <div class="simulation-title">
       SIMULATED PHISHING EXERCISE
     </div>
 
-    <div class="safety-banner">
+    <div class="simulation-subtitle">
       NO CREDENTIALS OR PERSONAL INFORMATION WERE COLLECTED
     </div>
 
-    <div class="course">
-      GEORGIA TECH CS 6725
+    <div class="card">
+
+      <div class="brand-row">
+        <div class="brand-mark">GT</div>
+        <div class="brand-text">CS 6725 Security Exercise</div>
+      </div>
+
+      <h1>Simulation Overview</h1>
+
+      <div class="subtitle">
+        This authorized course exercise demonstrates how publicly available
+        professional information can be used to create a targeted
+        spear-phishing message.
+      </div>
+
+      <div class="info-label">Target</div>
+      <div class="info-box">Eldon</div>
+
+      <div class="info-label">Course</div>
+      <div class="info-box">Georgia Tech CS 6725</div>
+
+      <div class="complete-box">
+        Simulation Complete
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="message">
+        Eldon, did we get you? 👀
+      </div>
+
+      <div class="description">
+        This was an authorized cybersecurity course exercise designed to
+        demonstrate how publicly available professional information can make
+        a spear-phishing message appear more relevant and believable.
+      </div>
+
+      <div class="safe-box">
+        ✓ No credentials were requested<br>
+        ✓ No personal information was collected<br>
+        ✓ No data was stored<br>
+        ✓ No software was downloaded or executed
+      </div>
+
+      <div class="footer">
+        CS 6725 Authorized Academic Simulation • 2026
+      </div>
+
     </div>
 
-    <h1>Phishing Simulation</h1>
-
-    <div class="orange-line"></div>
-
-    <div class="message">
-      Eldon, did we get you? 👀
-    </div>
-
-    <div class="description">
-      This page is part of an authorized cybersecurity course exercise.
-      The goal was to demonstrate how publicly available professional
-      information can be used to create a targeted spear-phishing message.
-    </div>
-
-    <div class="safe-box">
-      ✓ No credentials were requested<br>
-      ✓ No personal information was collected<br>
-      ✓ No data was stored<br>
-      ✓ No software was downloaded or executed
-    </div>
-
-    <div class="footer">
-      CS 6725 Authorized Academic Simulation • 2026
-    </div>
-
-  </div>
+  </main>
 
 </body>
 </html>
