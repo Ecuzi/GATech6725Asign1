@@ -1,1 +1,1 @@
-# GATech6725Asign1
+Authorized CS 6725 phishing simulation landing page for a Georgia Tech cybersecurity course project. Designed to demonstrate spear-phishing concepts without collecting credentials, personal information, or executing code.
